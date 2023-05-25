@@ -2,8 +2,6 @@
 
 namespace Logging;
 
-require_once __DIR__."/../vendor/autoload.php";
-
 use Psr\Log\LogLevel;
 use Logging\Formatter;
 use Logging\FileWriter;

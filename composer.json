@@ -1,0 +1,21 @@
+{
+    "name": "nazar/loging",
+    "description": "Simple loger",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nazarii Korol",
+            "email": "nazarkorol3684@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/log": "^3.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Logging\\": "src"
+        }
+    }
+}

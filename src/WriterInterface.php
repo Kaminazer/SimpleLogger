@@ -4,5 +4,5 @@ namespace Logging;
 
 interface WriterInterface
 {
-    function write (string $message):void;
+    function write ($level, string $message, array $context = []):void;
 }

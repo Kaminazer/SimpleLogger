@@ -2,15 +2,11 @@
 
 namespace Logging;
 
-use Psr\Log\LogLevel;
-use Logging\Formatter;
-use Logging\FileWriter;
 use Psr\Log\AbstractLogger;
 
 class Logger extends AbstractLogger
 {
-    protected string $fileName;
-    protected $writer;
+    protected WriterInterface $writer;
     public function __construct(WriterInterface $writer)
     {
         $this->writer = $writer;
@@ -18,7 +14,6 @@ class Logger extends AbstractLogger
 
     public function log($level, \Stringable|string $message, array $context = []): void
     {
-        $message = $this->writer->formatter->format($level, $message, $context);
-        $this->writer->write($message);
+        $this->writer->write($level, $message, $context);
     }
 }

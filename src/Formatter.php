@@ -4,7 +4,8 @@ namespace Logging;
 
 class Formatter implements FormatterInterface
 {
-    public function format ($level, string $message, array $context = [])
+
+    public function format ($level, string $message, array $context = []): string
     {
         $formatLevel = ucfirst($level);
         if (!empty ($context)) {
